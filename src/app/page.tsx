@@ -33,16 +33,16 @@ export default async function IndexPage() {
         ))}
       </ul>
 
-      <h1>Events</h1>
+      <h3>Events</h3>
       <ul className="grid grid-cols-1 gap-12 lg:grid-cols-2">
         {events.map((event) => (
           <li className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm dark:shadow-gray-900/20" key={event._id}>
-            <Link className="hover:underline block" href={`/events/$event?.slug?.current`}>
-              <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
-                {event?.name}
-              </h2>
+            <Link className="hover:underline block" href={`/${event.slug.current}`}>
+              <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
+                {event.name}
+              </h4>
               <p className="text-m font-semibold text-gray-900 dark:text-white">
-                {event?.eventType}
+                {event.eventType}
               </p>
             </Link>
           </li>
