@@ -33,8 +33,8 @@ export default async function IndexPage() {
         ))}
       </ul>
 
-      <h3>Events</h3>
-      <ul className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+      <h3 className="text-4xl font-bold mb-8">Events</h3>
+      <ul className="grid grid-cols-1 gap-12 lg:grid-cols-2 m-4">
         {events.map((event) => (
           <li className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm dark:shadow-gray-900/20" key={event._id}>
             <Link className="hover:underline block" href={`/${event.slug.current}`}>
